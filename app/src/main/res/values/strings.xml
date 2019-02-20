@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">iqPay</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="title_creditcard_list">CreditCards</string>
+    <string name="title_creditcard_detail">CreditCard Detail</string>
+    <string name="title_activity_main_user_drawer">MainUserDrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_sunrise_networks">Sunrise Networks GmbH is a company that specialized in IT solutions and system integrations. Our engineers are always ready for new challenges. With more than a decade of professional IT expertise our engineers will be able to meet your targets and offer you excellent post sales support. Sunrise Networks GmbH is an IT expert To ensure you excellent quality and state-of-the art, our engineers work around the clock to improve performance and knowledge See our certifications list. Sunrise Networks Engineers are also experts in telecommunications system design and integrations. Over 15 years of telecommunications experience we are well prepared for whatever telecommunications requirements you might have.</string>
+</resources>

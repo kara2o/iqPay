@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutReviewTransaction"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/toolbar_height"
+    android:background="@color/dark_grey">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineAdvertisementImageBottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintGuide_percent="0.525"
+        android:orientation="horizontal"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSearchBoxTop"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSearchBoxBottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.615" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTransactionDetailTop"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.627" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTransactionDetailBottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTransactionConfirmButtonsTop"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.905" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTransactionConfirmButtonsBottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.97" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMiddleLeft"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.482" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMiddleRight"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.523" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeftMargin"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRightMargin"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".94" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/adv1"
+        app:layout_constraintBottom_toTopOf="@id/guidelineAdvertisementImageBottom"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button_solid_orange"
+        android:fontFamily="@font/agencyfb_bold"
+        android:gravity="center"
+        android:hint="IQ-0052-8999"
+        android:textColorHint="#F7F7F7"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineSearchBoxBottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSearchBoxTop" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_border_grey"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeftMargin"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRightMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTransactionDetailTop"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTransactionDetailBottom">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDetailSeperator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.29" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDetailsTop"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.03" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineTotalAmountTextView"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.43" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineTotalAmountValueTop"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.56" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineTotalAmountValueBottom"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDetailQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.455" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDetailUnitPrice"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.775" />
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineDetailDate"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.044" />
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="Date:"
+            app:layout_constraintStart_toEndOf="@id/guidelineDetailDate"
+            app:layout_constraintEnd_toEndOf="@id/textViewCompletedTransactions"
+            app:layout_constraintTop_toTopOf="@+id/guidelineDetailsTop"
+            tools:layout_editor_absoluteX="139dp" />
+        <TextView
+            android:id="@+id/textViewDateValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="07.02.2019"
+            android:textColor="@color/blueButton"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@id/textViewCompletedTransactions"
+            app:layout_constraintStart_toEndOf="@id/guidelineDetailDate"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+
+        <TextView
+            android:id="@+id/textViewQuantitiy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="Quantity:"
+            app:layout_constraintStart_toEndOf="@id/guidelineDetailQuantity"
+            app:layout_constraintEnd_toEndOf="@id/textViewCompletedTransactions"
+            app:layout_constraintTop_toTopOf="@+id/guidelineDetailsTop"
+            tools:layout_editor_absoluteX="139dp" />
+        <TextView
+            android:id="@+id/textViewQuantityValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="5"
+            android:textColor="@color/blueButton"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@id/textViewCompletedTransactions"
+            app:layout_constraintStart_toEndOf="@id/guidelineDetailQuantity"
+            app:layout_constraintTop_toBottomOf="@+id/textViewQuantitiy" />
+
+        <TextView
+            android:id="@+id/textViewUnitPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="Unit Price:"
+            app:layout_constraintStart_toEndOf="@id/guidelineDetailUnitPrice"
+            app:layout_constraintEnd_toEndOf="@id/textViewCompletedTransactions"
+            app:layout_constraintTop_toTopOf="@+id/guidelineDetailsTop"
+            tools:layout_editor_absoluteX="139dp" />
+        <TextView
+            android:id="@+id/textViewUnitPriceValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="10.000.00 IQD"
+            android:textColor="@color/blueButton"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="@id/textViewCompletedTransactions"
+            app:layout_constraintStart_toEndOf="@id/guidelineDetailUnitPrice"
+            app:layout_constraintTop_toBottomOf="@+id/textViewUnitPrice" />
+
+        <TextView
+            android:id="@+id/textViewTotalAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="Total Amount: (IQD)"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textViewCartTotalAmountValue"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/textViewCartTotalAmountValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/agencyfb_bold"
+            android:text="25.000.00"
+            android:textColor="@color/orangeButton"
+            android:textSize="57dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTotalAmountValueTop"
+            app:layout_constraintBottom_toTopOf="@id/guidelineTotalAmountValueBottom"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button_solid_red"
+        android:fontFamily="@font/agencyfb_bold"
+        android:gravity="center"
+        android:hint="Cancel"
+        android:textColorHint="#F7F7F7"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTransactionConfirmButtonsBottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelineMiddleLeft"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTransactionConfirmButtonsTop" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button_solid_red"
+        android:fontFamily="@font/agencyfb_bold"
+        android:gravity="center"
+        android:hint="Cancel"
+        android:textColorHint="#F7F7F7"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTransactionConfirmButtonsBottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelineMiddleLeft"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTransactionConfirmButtonsTop" />
+
+    <Button
+        android:id="@+id/buttonCompleteTransaction"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button_blue"
+        android:fontFamily="@font/agencyfb_bold"
+        android:gravity="center"
+        android:hint="Complete"
+        android:textColorHint="#F7F7F7"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineTransactionConfirmButtonsBottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineMiddleRight"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTransactionConfirmButtonsTop" />
+
+</android.support.constraint.ConstraintLayout>

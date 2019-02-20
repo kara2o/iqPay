@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/login_activity_passwordtextfield_edit_text_background_color"/>
+
+    <stroke
+            android:color="@color/login_activity_passwordtextfield_edit_text_border_color"
+            android:width="@dimen/login_activity_passwordtextfield_edit_text_border_size"/>
+
+    <corners android:radius="@dimen/login_activity_passwordtextfield_edit_text_radius"/>
+
+</shape>

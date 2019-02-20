@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape xmlns:android="http://schemas.android.com/apk/res/android">
+                    <corners android:radius="@dimen/login_activity_loginbutton_button_radius"/>
+                    <gradient
+                            android:angle="0"
+                            android:centerX="0.50"
+                            android:centerY="0.50"
+                            android:endColor="@color/login_activity_loginbutton_button_to_color"
+                            android:startColor="@color/login_activity_loginbutton_button_from_color"/>
+                </shape>
+            </item>
+            <item>
+                <shape xmlns:android="http://schemas.android.com/apk/res/android">
+                    <corners android:radius="@dimen/login_activity_loginbutton_button_radius"/>
+                    <gradient
+                            android:angle="0"
+                            android:centerX="0.50"
+                            android:centerY="0.50"
+                            android:endColor="@color/login_activity_loginbutton_button_to_color"
+                            android:startColor="@color/login_activity_loginbutton_button_from_color"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android">
+            <corners android:radius="@dimen/login_activity_loginbutton_button_radius"/>
+            <gradient
+                    android:angle="0"
+                    android:centerX="0.50"
+                    android:centerY="0.50"
+                    android:endColor="@color/login_activity_loginbutton_button_to_color"
+                    android:startColor="@color/login_activity_loginbutton_button_from_color"/>
+        </shape>
+    </item>
+</selector>

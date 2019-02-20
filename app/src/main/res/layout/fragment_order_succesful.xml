@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".user.OrderSuccesfulFragment">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textViewOrderSuccessfulTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:textColor="@color/blueButton"
+        android:fontFamily="@font/agencyfb_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Shopping was Successful"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/textViewOrderSuccessfulDetails"/>
+
+    <TextView
+        android:id="@+id/textViewOrderSuccessfulDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:textColor="#40474F"
+        android:fontFamily="@font/agencyfb_bold"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textViewOrderSuccessfulTitle"/>
+    <TextView
+        android:id="@+id/textViewOrderSuccessfulShoppingID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/blueButton"
+        android:fontFamily="@font/agencyfb_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Shopping ID"
+        android:gravity="left"
+        app:layout_constraintTop_toBottomOf="@id/textViewOrderSuccessfulDetails"/>
+
+    <TextView
+        android:id="@+id/textViewOrderSuccessfulShoppingIDValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="27dp"
+        android:background="@drawable/rounded_button_white"
+        android:layout_marginTop="9dp"
+        android:textColor="#40474F"
+        android:fontFamily="@font/agencyfb_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="IQ-0052-8999"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/textViewOrderSuccessfulShoppingID"/>
+
+
+</android.support.constraint.ConstraintLayout>
+</FrameLayout>

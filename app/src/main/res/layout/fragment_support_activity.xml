@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_marginTop="@dimen/toolbar_height"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_grey"
+    android:id="@+id/drawerLayoutReportActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLogoLeftMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".08" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLogoRightMargin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".92" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineProblemTypeUpper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineProblemTypeLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".27" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSubjectUpper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".285" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSubjectLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".355" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelinePriorityUpper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".37" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelinePriorityLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".44" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineDetailsUpper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".455" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineDetailsLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineButtonSendUpper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.92" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineButtonSendLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+
+
+
+    <EditText
+        android:id="@+id/editTextReportActivitySubject"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="right"
+        android:padding="11dp"
+        android:fontFamily="@font/agencyfb_bold"
+        android:textSize="14dp"
+        android:background="@drawable/rounded_button_white"
+        android:textColorHint="#B9B9B9"
+        android:hint="Problem Type"
+        app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineProblemTypeUpper"
+        app:layout_constraintBottom_toTopOf="@id/guidelineProblemTypeLower">
+
+
+    </EditText>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideLineCarPhotoBoxTop"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintGuide_begin="580dp"/>
+
+    <EditText
+        android:id="@+id/editTextReportActivitySubjectDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button_white"
+        android:textColorHint="#B9B9B9"
+        android:gravity="right"
+        android:fontFamily="@font/agencyfb_bold"
+        android:textSize="14dp"
+        android:padding="11dp"
+        android:hint="Subject"
+        app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSubjectUpper"
+        app:layout_constraintBottom_toTopOf="@id/guidelineSubjectLower"/>
+
+
+    <EditText
+        android:id="@+id/editTextReportActivityCategory"
+        android:textColorHint="#B9B9B9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Priority"
+        android:fontFamily="@font/agencyfb_bold"
+        android:textSize="14dp"
+        android:gravity="right"
+        android:padding="11dp"
+        android:background="@drawable/rounded_button_white"
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelinePriorityUpper"
+        app:layout_constraintBottom_toTopOf="@id/guidelinePriorityLower"/>
+
+    <EditText
+        android:id="@+id/editTextReportActivityDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button_white"
+        android:textColorHint="#B9B9B9"
+        android:hint="Problem Details"
+        android:fontFamily="@font/agencyfb_bold"
+        android:textSize="14dp"
+        android:gravity="right"
+        android:padding="11dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineDetailsLower"
+        app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineDetailsUpper" />
+
+
+    <Button
+        android:id="@+id/buttonReceiptExitCar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button"
+        android:clickable="true"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:text="Send"
+        android:fontFamily="@font/agencyfb_bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineButtonSendUpper"
+        app:layout_constraintBottom_toTopOf="@id/guidelineButtonSendLower"/>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+
+

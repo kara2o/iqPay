@@ -1,0 +1,174 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutMainActivityAdmin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/toolbar_height"
+    android:background="@color/dark_grey">
+
+
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineAdvertisementImageBottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintGuide_percent="0.525"
+        android:orientation="horizontal"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSearchBoxTop"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.649" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSearchBoxBottom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.715" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineTransactionListTop"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.762" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelinePendingTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.025" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineCompletedTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.345" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineCanceledTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.679" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineLeftMargin"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".06" />
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineRightMargin"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".926" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/adv1"
+        app:layout_constraintBottom_toTopOf="@id/guidelineAdvertisementImageBottom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="10dp"
+        android:fontFamily="@font/agencyfb_bold"
+        android:text="View Transactions (14)"
+        app:layout_constraintStart_toStartOf="@id/textViewCompletedTransactions"
+        app:layout_constraintEnd_toEndOf="@id/textViewCompletedTransactions"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineAdvertisementImageBottom"
+        tools:layout_editor_absoluteX="139dp" />
+
+    <TextView
+        android:id="@+id/textViewPendingTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/agencyfb_bold"
+        android:text="Pending Transactions (4)"
+        android:textSize="10dp"
+        android:layout_marginLeft="3dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPendingTransActionsColor"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewPendingTransActionsColor"/>
+    <ImageView
+        android:id="@+id/imageViewPendingTransActionsColor"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:layout_constraintStart_toEndOf="@id/guidelinePendingTransactions"
+        app:layout_constraintTop_toBottomOf="@id/guidelineAdvertisementImageBottom"
+        android:background="@color/orangeButton"
+        android:layout_marginTop="28dp" />
+
+    <TextView
+        android:id="@+id/textViewCompletedTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/agencyfb_bold"
+        android:text="Completed Transactions (7)"
+        android:textSize="10dp"
+        android:layout_marginLeft="3dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCompletedTransActionsColor"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewPendingTransActionsColor"/>
+    <ImageView
+        android:id="@+id/imageViewCompletedTransActionsColor"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:layout_constraintStart_toEndOf="@id/guidelineCompletedTransactions"
+        app:layout_constraintTop_toBottomOf="@id/guidelineAdvertisementImageBottom"
+        android:background="@color/blueButton"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:id="@+id/textViewCanceledTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/agencyfb_bold"
+        android:text="Canceled Transactions (3)"
+        android:textSize="10dp"
+        android:layout_marginLeft="3dp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCanceledTransActionsColor"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewPendingTransActionsColor"/>
+    <ImageView
+        android:id="@+id/imageViewCanceledTransActionsColor"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        app:layout_constraintStart_toEndOf="@id/guidelineCanceledTransactions"
+        app:layout_constraintTop_toBottomOf="@id/guidelineAdvertisementImageBottom"
+        android:background="@color/colorCGRed"
+        android:layout_marginTop="28dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_button_white"
+        android:fontFamily="@font/agencyfb_bold"
+        android:gravity="center"
+        android:hint="Type Transaction ID..."
+        android:textColorHint="#40474F"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelineSearchBoxBottom"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSearchBoxTop" />
+
+    <ListView
+        android:id="@+id/listviewTransactions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTransactionListTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guidelineLeftMargin"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRightMargin"></ListView>
+
+</android.support.constraint.ConstraintLayout>

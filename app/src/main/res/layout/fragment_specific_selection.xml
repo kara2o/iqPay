@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:descendantFocusability="afterDescendants"
+    android:clickable="false"
+    android:focusable="false">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelinerightPanelSeperator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.27" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayoutLogo"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toTopOf="@id/guidelinerightPanelSeperator"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineLogoTopMargin"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.22" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineLogoBottomMargin"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.76" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineLogoLeftMargin"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.336" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineLogoRightMargin"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <ImageView
+            android:layout_width="231dp"
+            android:layout_height="105dp"
+            android:background="@drawable/iqpay_logo"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineLogoBottomMargin"
+            app:layout_constraintEnd_toEndOf="@id/guidelineLogoRightMargin"
+            app:layout_constraintStart_toStartOf="@id/guidelineLogoLeftMargin"
+            app:layout_constraintTop_toTopOf="@id/guidelineLogoTopMargin" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewMainSelection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/guidelinerightPanelSeperator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:descendantFocusability="afterDescendants"
+        android:clickable="false"
+        android:focusable="false">
+
+        <TableLayout
+            android:id="@+id/tableLayoutMainSelection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            android:descendantFocusability="afterDescendants"
+            android:clickable="false"
+            android:focusable="false">
+
+            <TableRow
+                android:id="@+id/tableRowMainSelection0"
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:descendantFocusability="afterDescendants"
+                android:clickable="false"
+                android:focusable="false">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraintLayoutTableRowMain0"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:descendantFocusability="afterDescendants"
+                    android:clickable="false"
+                    android:focusable="false">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guidelineVerticalCenter"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <ImageView
+                        android:id="@+id/imageViewMain01"
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_listview_item"
+                        android:padding="20dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalCenter"
+                        android:src="@drawable/applepay"
+                        android:clickable="true"
+                        android:focusable="true" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVerticalCenter"
+                        android:background="@drawable/rounded_listview_item"
+                        android:src="@drawable/googlepay"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </TableRow>
+            <TableRow
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guidelineVerticalCenter1"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_listview_item"
+                        android:padding="20dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalCenter1"
+                        android:src="@drawable/asiacell_logo_600450" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVerticalCenter1"
+                        android:background="@drawable/rounded_listview_item"
+                        android:src="@drawable/korek"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </TableRow>
+            <TableRow
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guidelineVerticalCenter2"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_listview_item"
+                        android:padding="20dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalCenter2"
+                        android:src="@drawable/fastlink" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVerticalCenter2"
+                        android:background="@drawable/rounded_listview_item"
+                        android:src="@drawable/tishknet"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </TableRow>
+            <TableRow
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guidelineVerticalCenter3"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_listview_item"
+                        android:padding="20dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalCenter3"
+                        android:src="@drawable/iqinline" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVerticalCenter3"
+                        android:background="@drawable/rounded_listview_item"
+                        android:src="@drawable/amazon"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </TableRow>
+            <TableRow
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guidelineVerticalCenter4"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_listview_item"
+                        android:padding="20dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalCenter4"
+                        android:src="@drawable/microsoftpay" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVerticalCenter4"
+                        android:background="@drawable/rounded_listview_item"
+                        android:src="@drawable/zain"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </TableRow>
+            <TableRow
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guidelineVerticalCenter5"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_listview_item"
+                        android:padding="20dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalCenter5"
+                        android:src="@drawable/gorannet" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVerticalCenter5"
+                        android:background="@drawable/rounded_listview_item"
+                        android:src="@drawable/ebay"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginLeft="75dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp">
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guidelineVerticalCenter6"
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5"/>
+
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/rounded_listview_item"
+                        android:padding="20dp"
+                        android:layout_marginRight="25dp"
+                        app:layout_constraintEnd_toStartOf="@id/guidelineVerticalCenter6"
+                        android:src="@drawable/applepay" />
+                    <ImageView
+                        android:layout_width="300dp"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="25dp"
+                        android:padding="20dp"
+                        app:layout_constraintStart_toEndOf="@id/guidelineVerticalCenter6"
+                        android:background="@drawable/rounded_listview_item"
+                        android:src="@drawable/googlepay"/>
+
+                </android.support.constraint.ConstraintLayout>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
