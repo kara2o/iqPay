@@ -2,36 +2,18 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guidelineTop"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.02" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guidelineBottom"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.086" />
 
 <android.support.constraint.ConstraintLayout
-    android:id="@+id/constraintLayoutCartListItem"
+    android:id="@+id/constraintLayoutTransactionListItem"
     android:layout_width="0dp"
-    android:layout_height="50dp"
-    android:layout_marginRight="17dp"
-    android:layout_marginLeft="17dp"
-    android:layout_marginTop="10dp"
+    android:layout_height="match_parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/guidelineTop"
-    app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
     android:background="@drawable/rounded_button_solid_orange">
-
 
 
     <TextView
@@ -51,5 +33,4 @@
         android:gravity="center" />
 
 </android.support.constraint.ConstraintLayout>
-
 </android.support.constraint.ConstraintLayout>

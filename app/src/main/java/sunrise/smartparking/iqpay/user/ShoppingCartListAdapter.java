@@ -1,6 +1,7 @@
 package sunrise.smartparking.iqpay.user;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,12 +17,20 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import sunrise.smartparking.iqpay.R;
+import sunrise.smartparking.iqpay.admin.LoginActivityAdmin;
+import sunrise.smartparking.iqpay.admin.MainActivityAdmin;
 
 public class ShoppingCartListAdapter extends BaseAdapter
 {
 
     private final Context context;
     private final FragmentActivity activity;
+    private boolean reversed;
+
+    public void setReversed(boolean reversed)
+    {
+        this.reversed = reversed;
+    }
 
     public ShoppingCartListAdapter(FragmentActivity activity, Context context)
     {
@@ -73,11 +83,17 @@ public class ShoppingCartListAdapter extends BaseAdapter
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View row = convertView;
-        if (position == listCartItems.size())
+        if ( (position == listCartItems.size() && !reversed ) || (position == 0 && reversed))
         {
             row = LayoutInflater.from(context).inflate(R.layout.button_proceed_to_checkout, parent, false);
             row.findViewById(R.id.buttonProceedToCheckout).setOnClickListener(onClickButtomCheckout(listCartItems.size()));
             if (listCartItems.size() > 0) row.findViewById(R.id.buttonProceedToCheckout).setBackgroundResource(R.drawable.rounded_button_blue);
+            if (reversed)
+            {
+                Button buttonOrderItems =  ((Button) row.findViewById(R.id.buttonProceedToCheckout));
+                buttonOrderItems.setText("Order Items");
+                buttonOrderItems.setOnClickListener(orderItems());
+            }
             return row;
         }
 
@@ -98,6 +114,19 @@ public class ShoppingCartListAdapter extends BaseAdapter
         return row;
     }
 
+    private View.OnClickListener orderItems()
+    {
+        return new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // todo: add api call for ordering items here
+                activity.startActivity(new Intent(activity, LoginActivityAdmin.class));
+            }
+        };
+    }
+
     private View.OnClickListener onClickButtomCheckout(final int intNumberOfItems)
     {
         return new View.OnClickListener()
@@ -116,6 +145,8 @@ public class ShoppingCartListAdapter extends BaseAdapter
 
                     // Commit the transaction
                     transaction.commit();
+                    setReversed(true);
+                    notifyDataSetChanged();
                 }
             }
         };

@@ -105,6 +105,7 @@
         app:layout_constraintEnd_toStartOf="@id/guidelineAboutTextRightMargin"/>
 
     <Button
+        android:id="@+id/buttonReturnToHome"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/guidelineButtonsTopMargin"
@@ -118,6 +119,7 @@
         android:textAllCaps="false"/>
 
     <Button
+        android:id="@+id/buttonContactSunrise"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintTop_toBottomOf="@id/guidelineButtonsTopMargin"

@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/toolbar_height"
-    android:background="@color/dark_grey">
+    android:background="@color/dark_grey"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
 
 
 
@@ -79,7 +81,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewViewTransactions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

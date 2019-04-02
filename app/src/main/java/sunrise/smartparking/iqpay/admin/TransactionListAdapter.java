@@ -1,4 +1,4 @@
-package sunrise.smartparking.iqpay.user;
+package sunrise.smartparking.iqpay.admin;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import sunrise.smartparking.iqpay.R;
 import sunrise.smartparking.iqpay.admin.MainActivityAdmin;
 import sunrise.smartparking.iqpay.admin.ReviewTransactionFragmentAdmin;
+import sunrise.smartparking.iqpay.user.CartItem;
 
 public class TransactionListAdapter extends BaseAdapter
 {
@@ -56,7 +57,7 @@ public class TransactionListAdapter extends BaseAdapter
     @Override
     public int getCount()
     {
-        return listCartItems.size() + 1;
+        return listCartItems.size();
     }
 
     @Override
@@ -75,17 +76,9 @@ public class TransactionListAdapter extends BaseAdapter
     public View getView(int position, View convertView, ViewGroup parent)
     {
         View row = convertView;
-        if (position == listCartItems.size())
-        {
-            row = LayoutInflater.from(context).inflate(R.layout.button_proceed_to_checkout, parent, false);
-            row.findViewById(R.id.buttonProceedToCheckout).setOnClickListener(onClickButtomCheckout(listCartItems.size()));
-            if (listCartItems.size() > 0) row.findViewById(R.id.buttonProceedToCheckout).setBackgroundResource(R.drawable.rounded_button_blue);
-            return row;
-        }
-
-
         row = LayoutInflater.from(context).inflate(R.layout.listitem_transaction, parent, false);
 
+        // todo: bind data from server call to list view here
 
         return row;
     }

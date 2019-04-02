@@ -36,7 +36,7 @@ public class MainActivityAdmin extends AppCompatActivity
     {
         final DrawerLayout drawerLayoutMainActivity = ((DrawerLayout)findViewById(R.id.drawerLayoutMainActivity));
         ActionBarDrawerToggle t = new ActionBarDrawerToggle(MainActivityAdmin.this, drawerLayoutMainActivity, R.string.navigation_drawer_open, R.string.nav_header_desc);
-        t.setHomeAsUpIndicator(R.drawable.ic_drawer);
+        t.setHomeAsUpIndicator(R.drawable.drawer_icon);
         drawerLayoutMainActivity.addDrawerListener(t);
         t.syncState();
         drawerLayoutMainActivity.setScrimColor(getResources().getColor(android.R.color.transparent));
@@ -61,7 +61,7 @@ public class MainActivityAdmin extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                setContentView(R.layout.fragment_support_activity);
+                replaceFragment(new SupportActivityFragment(), true);
                 drawerLayoutMainActivity.closeDrawer(Gravity.RIGHT);
             }
         });

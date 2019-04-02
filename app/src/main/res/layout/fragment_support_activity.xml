@@ -2,11 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
-    android:layout_marginTop="@dimen/toolbar_height"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
+    android:layout_marginTop="@dimen/toolbar_height"
     android:id="@+id/drawerLayoutReportActivity">
 
     <android.support.constraint.Guideline
@@ -73,26 +72,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.87" />
+        app:layout_constraintGuide_percent="0.82" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guidelineButtonSendUpper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.92" />
+        app:layout_constraintGuide_percent="0.85" />
+
     <android.support.constraint.Guideline
         android:id="@+id/guidelineButtonSendLower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="1" />
+        app:layout_constraintGuide_percent="0.93" />
 
 
-
+    <ImageView
+        android:layout_width="245dp"
+        android:layout_height="51dp"
+        android:src="@drawable/sunrise_logo_on_dark"
+        app:layout_constraintBottom_toTopOf="@id/editTextProblemType"
+        app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextReportActivitySubject"
+        android:id="@+id/editTextProblemType"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="right"
@@ -105,10 +112,8 @@
         app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
         app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
         app:layout_constraintTop_toBottomOf="@id/guidelineProblemTypeUpper"
-        app:layout_constraintBottom_toTopOf="@id/guidelineProblemTypeLower">
+        app:layout_constraintBottom_toTopOf="@id/guidelineProblemTypeLower"/>
 
-
-    </EditText>
 
     <android.support.constraint.Guideline
         android:id="@+id/guideLineCarPhotoBoxTop"
@@ -132,25 +137,25 @@
         app:layout_constraintTop_toBottomOf="@id/guidelineSubjectUpper"
         app:layout_constraintBottom_toTopOf="@id/guidelineSubjectLower"/>
 
-
     <EditText
-        android:id="@+id/editTextReportActivityCategory"
-        android:textColorHint="#B9B9B9"
+        android:id="@+id/editTextProblemSubject"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:hint="Priority"
+        android:background="@drawable/rounded_button_white"
+        android:textColorHint="#B9B9B9"
+        android:gravity="right"
         android:fontFamily="@font/agencyfb_bold"
         android:textSize="14dp"
-        android:gravity="right"
         android:padding="11dp"
-        android:background="@drawable/rounded_button_white"
-        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        android:hint="Subject"
         app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
-        app:layout_constraintTop_toBottomOf="@id/guidelinePriorityUpper"
-        app:layout_constraintBottom_toTopOf="@id/guidelinePriorityLower"/>
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSubjectUpper"
+        app:layout_constraintBottom_toTopOf="@id/guidelineSubjectLower"/>
+
 
     <EditText
-        android:id="@+id/editTextReportActivityDetails"
+        android:id="@+id/editTextProblemDetails"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/rounded_button_white"
@@ -182,7 +187,15 @@
         app:layout_constraintTop_toBottomOf="@id/guidelineButtonSendUpper"
         app:layout_constraintBottom_toTopOf="@id/guidelineButtonSendLower"/>
 
-
+    <Spinner
+        android:id="@+id/comboBoxProblemPriority"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/guidelineLogoLeftMargin"
+        app:layout_constraintEnd_toStartOf="@id/guidelineLogoRightMargin"
+        app:layout_constraintTop_toBottomOf="@id/guidelinePriorityUpper"
+        app:layout_constraintBottom_toTopOf="@id/guidelinePriorityLower"
+        android:background="@drawable/rounded_button_white" />
 
 
 </android.support.constraint.ConstraintLayout>

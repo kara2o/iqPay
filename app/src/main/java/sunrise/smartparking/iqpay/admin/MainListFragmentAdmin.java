@@ -1,21 +1,21 @@
 package sunrise.smartparking.iqpay.admin;
 
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import sunrise.smartparking.iqpay.R;
 import sunrise.smartparking.iqpay.user.CartItem;
-import sunrise.smartparking.iqpay.user.SpecificListFragment;
-import sunrise.smartparking.iqpay.user.TransactionListAdapter;
 
 public class MainListFragmentAdmin extends Fragment
 {
@@ -38,13 +38,36 @@ public class MainListFragmentAdmin extends Fragment
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id)
                 {
-
-
+                    ((MainActivityAdmin) getActivity()).replaceFragment(new ReviewTransactionFragmentAdmin(), true);
                 }
             });
             ArrayList<CartItem> list = new ArrayList<CartItem>();
             list.add(new CartItem(0,null));
             listView.setAdapter(new TransactionListAdapter(getActivity(), getActivity().getApplicationContext(), list));
+
+            // todo: add responsive resizing of views later
+            // resizeViews();
         }
+
+    private void resizeViews()
+    {
+        TextView textViewPendingTransactions = (TextView) fragmentView.findViewById(R.id.textViewPendingTransactions);
+        TextView textViewCompletedTransactions = (TextView) fragmentView.findViewById(R.id.textViewCompletedTransactions);
+        TextView textViewCanceledTransactions = (TextView) fragmentView.findViewById(R.id.textViewCanceledTransactions);
+        TextView textViewViewTransactions = (TextView) fragmentView.findViewById(R.id.textViewViewTransactions);
+
+
+        Display display = getActivity().getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        // Comparison device: 1440 x 2560 Google Pixel XL
+        int intDeltaWidth = size.x - 1440;
+        int intDeltaHeight = size.y - 2560;
+
+        textViewCanceledTransactions.setTextSize(TypedValue.COMPLEX_UNIT_DIP, intDeltaWidth*0.02f);
+        textViewCompletedTransactions.setTextSize(TypedValue.COMPLEX_UNIT_DIP, intDeltaWidth*0.02f);
+        textViewPendingTransactions.setTextSize(TypedValue.COMPLEX_UNIT_DIP, intDeltaWidth*0.02f);
+        textViewViewTransactions.setTextSize(TypedValue.COMPLEX_UNIT_DIP, intDeltaWidth*0.02f);
+    }
 
 }

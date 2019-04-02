@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:background="@drawable/rounded_button_white"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:id="@+id/constraintLayoutConfirmDialog">
+
+    <TextView
+        android:id="@+id/textViewConfirmDialog"
+        android:layout_width="0dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="15dp"
+        android:text="Transaction: IQ-0052-8999 Completed Successfully"
+        android:fontFamily="@font/agencyfb_bold"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#40474F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonReturn"/>
+
+    <Button
+        android:id="@+id/buttonReturn"
+        android:layout_width="142dp"
+        android:layout_height="42dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/agencyfb_bold"
+        android:hint="Return"
+        android:textColorHint="#F7F7F7"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewConfirmDialog"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
